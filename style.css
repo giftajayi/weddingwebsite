@@ -1,200 +1,353 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 :root {
 
-    --burgundy: #800020;
-    --champagne: #F7E7CE;
-    --gold: #D4AF37;
-    --cream: #FFF8F0;
+--brown:#6B4F3A;
+--cream:#F8F1E7;
+--gold:#D4AF37;
+--beige:#E6D5C3;
+--text:#4A3728;
 
 }
+
+
+
+* {
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
 
 body {
 
-    line-height:1.6;
-    color:#4a2c2a;
-    background:var(--cream);
+font-family:Georgia, serif;
+background:var(--cream);
+color:var(--text);
+line-height:1.7;
 
 }
+
+
+
+
 
 .hero {
 
 height:100vh;
-
-background:
-linear-gradient(
-rgba(80,0,20,0.65),
-rgba(80,0,20,0.65)
-),
-url("images/couple.jpg");
-
-background-size:cover;
-background-position:center;
+position:relative;
+overflow:hidden;
 
 }
 
 
 
-nav {
 
-    display:flex;
-    justify-content:space-between;
-    padding:25px 8%;
+.slider {
 
-}
-
-
-nav ul {
-
-    display:flex;
-    list-style:none;
-    gap:25px;
-
-}
-
-
-nav a {
-
-    color:white;
-    text-decoration:none;
+height:100%;
+width:100%;
 
 }
 
 
 
-.hero-content {
 
-    text-align:center;
-    margin-top:150px;
+.slides {
+
+display:flex;
+height:100%;
+width:300%;
+
+animation:slide 15s infinite;
+
+}
+
+
+
+.slides img {
+
+width:33.333%;
+height:100%;
+
+object-fit:cover;
 
 }
 
 
-.hero-content h1 {
 
-    font-size:40px;
+
+
+@keyframes slide {
+
+
+0% {
+
+transform:translateX(0);
 
 }
+
+
+30% {
+
+transform:translateX(0);
+
+}
+
+
+35% {
+
+transform:translateX(-33.33%);
+
+}
+
+
+65% {
+
+transform:translateX(-33.33%);
+
+}
+
+
+70% {
+
+transform:translateX(-66.66%);
+
+}
+
+
+100% {
+
+transform:translateX(-66.66%);
+
+}
+
+
+}
+
+
+
+
+
+
+
+.overlay {
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(70,45,25,0.55);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+padding:20px;
+
+}
+
+
+
+
+.overlay h1 {
+
+font-size:45px;
+
+margin:10px;
+
+}
+
+
+
+.overlay h2 {
+
+color:var(--gold);
+
+font-size:35px;
+
+}
+
+
+
+.overlay h3 {
+
+font-size:28px;
+
+}
+
+
+
+
+.invite {
+
+font-size:20px;
+
+margin:15px;
+
+}
+
+
+
+
+#countdown {
+
+font-size:22px;
+
+margin:20px;
+
+color:#fff;
+
+}
+
+
 
 
 
 .button {
 
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 30px;
-    background:#b76e79;
-    color:white;
-    text-decoration:none;
-    border-radius:25px;
+display:inline-block;
+
+background:var(--gold);
+
+color:white;
+
+padding:12px 35px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+margin-top:20px;
 
 }
+
+
 
 
 
 section {
 
-    padding:70px 10%;
-    text-align:center;
+padding:70px 10%;
+
+text-align:center;
 
 }
+
+
 
 
 
 section h2 {
 
-    font-size:35px;
-    margin-bottom:30px;
+color:var(--brown);
+
+font-size:36px;
+
+margin-bottom:25px;
 
 }
+
+
 
 
 
 .cards {
 
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    flex-wrap:wrap;
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
 
 }
+
+
+
 
 
 .card {
 
-    background:#f8f8f8;
-    padding:30px;
-    width:300px;
-    border-radius:10px;
+background:white;
+
+padding:30px;
+
+width:300px;
+
+border-radius:15px;
+
+border-top:5px solid var(--gold);
 
 }
 
 
-
-.gallery {
-
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-
-}
-
-
-
-.gallery img {
-
-    width:300px;
-    height:300px;
-    object-fit:cover;
-    border-radius:10px;
-
-}
 
 
 
 button {
 
-    padding:12px 25px;
-    border:none;
-    background:#b76e79;
-    color:white;
-    border-radius:25px;
-    cursor:pointer;
+background:var(--brown);
+
+color:white;
+
+border:none;
+
+padding:15px 30px;
+
+border-radius:30px;
+
+cursor:pointer;
 
 }
+
+
 
 
 
 footer {
 
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:var(--brown);
+
+color:var(--cream);
+
+padding:25px;
+
+text-align:center;
 
 }
+
+
 
 
 
 @media(max-width:700px){
 
-nav {
 
-    flex-direction:column;
-    align-items:center;
+.overlay h1 {
+
+font-size:30px;
 
 }
 
 
-.hero-content h1 {
+nav {
 
-    font-size:28px;
+display:none;
 
 }
 
