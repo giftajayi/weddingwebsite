@@ -1,14 +1,4 @@
 
-function showMessage(){
-
-document.getElementById("message").innerHTML =
-"Thank you for confirming! We cannot wait to celebrate with you ❤️";
-
-}
-
-
-
-
 const weddingDate = new Date("October 15, 2026 14:00:00").getTime();
 
 
