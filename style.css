@@ -4,7 +4,7 @@
     --dark-brown: #4A3728;
     --cream: #F8F1E7;
     --gold: #D4AF37;
-    --beige: #E6D5C3;
+    --burgundy: #800020;
     --white: #FFFFFF;
 
 }
@@ -24,7 +24,7 @@ body {
     font-family: "Georgia", serif;
     background: var(--cream);
     color: var(--dark-brown);
-    line-height: 1.7;
+    line-height: 1.8;
 
 }
 
@@ -35,29 +35,24 @@ body {
 .hero {
 
     min-height: 100vh;
-
     background: var(--cream);
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     position: relative;
-
     overflow: hidden;
 
 }
 
 
 
-/* PHOTO SLIDER */
+/* IMAGE SLIDER */
 
 .slider {
 
     width: 420px;
-
     height: 650px;
 
     overflow: hidden;
@@ -78,7 +73,6 @@ body {
     display: flex;
 
     width: 300%;
-
     height: 100%;
 
     animation: slide 15s infinite;
@@ -99,26 +93,26 @@ body {
 
 
 
-/* AUTOMATIC SLIDE ANIMATION */
+/* AUTO SLIDE */
 
 @keyframes slide {
 
 
-    0%, 30% {
+    0%,30% {
 
         transform: translateX(0);
 
     }
 
 
-    35%, 65% {
+    35%,65% {
 
         transform: translateX(-33.333%);
 
     }
 
 
-    70%, 100% {
+    70%,100% {
 
         transform: translateX(-66.666%);
 
@@ -131,19 +125,20 @@ body {
 
 
 
-/* TEXT OVER IMAGE */
+
+
+/* HERO TEXT OVERLAY */
 
 .overlay {
 
     position: absolute;
 
     width: 100%;
-
     height: 100%;
 
 
     background:
-    rgba(60,40,25,0.45);
+    rgba(70,45,25,0.45);
 
 
     display: flex;
@@ -179,9 +174,9 @@ body {
 
     font-size: 55px;
 
-    margin: 5px;
-
     font-weight: normal;
+
+    margin: 5px;
 
 }
 
@@ -189,9 +184,9 @@ body {
 
 .overlay h2 {
 
-    font-size: 40px;
-
     color: var(--gold);
+
+    font-size: 40px;
 
     margin: 5px;
 
@@ -219,6 +214,8 @@ body {
 
 
 
+
+
 /* COUNTDOWN */
 
 #countdown {
@@ -227,11 +224,10 @@ body {
 
     margin: 20px 0;
 
-    color: white;
-
-    letter-spacing: 1px;
+    color:white;
 
 }
+
 
 
 
@@ -241,21 +237,21 @@ body {
 
 .button {
 
-    display: inline-block;
+    display:inline-block;
 
-    background: var(--gold);
+    background:var(--gold);
 
-    color: white;
+    color:white;
 
-    padding: 14px 40px;
+    padding:14px 40px;
 
-    border-radius: 30px;
+    border-radius:30px;
 
-    text-decoration: none;
+    text-decoration:none;
 
-    margin-top: 20px;
+    margin-top:20px;
 
-    transition: 0.3s;
+    transition:0.3s;
 
 }
 
@@ -263,9 +259,11 @@ body {
 
 .button:hover {
 
-    background: var(--brown);
+    background:var(--brown);
 
 }
+
+
 
 
 
@@ -275,9 +273,9 @@ body {
 
 section {
 
-    padding: 80px 10%;
+    padding:80px 10%;
 
-    text-align: center;
+    text-align:center;
 
 }
 
@@ -285,11 +283,21 @@ section {
 
 section h2 {
 
-    font-size: 38px;
+    color:var(--brown);
 
-    color: var(--brown);
+    font-size:38px;
 
-    margin-bottom: 25px;
+    margin-bottom:25px;
+
+}
+
+
+
+section p {
+
+    max-width:900px;
+
+    margin:auto;
 
 }
 
@@ -297,17 +305,93 @@ section h2 {
 
 
 
-/* DETAILS CARDS */
+
+
+/* WEDDING COLOURS SECTION */
+
+.colours {
+
+    background:white;
+
+}
+
+
+
+.colour-palette {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.colour {
+
+    width:200px;
+
+    height:130px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.15);
+
+}
+
+
+
+.burgundy {
+
+    background:var(--burgundy);
+
+}
+
+
+
+.champagne {
+
+    background:var(--gold);
+
+}
+
+
+
+
+
+
+
+
+/* CARDS */
 
 .cards {
 
-    display: flex;
+    display:flex;
 
-    justify-content: center;
+    justify-content:center;
 
-    gap: 25px;
+    gap:25px;
 
-    flex-wrap: wrap;
+    flex-wrap:wrap;
 
 }
 
@@ -315,17 +399,18 @@ section h2 {
 
 .card {
 
-    background: white;
+    background:white;
 
-    width: 300px;
+    width:300px;
 
-    padding: 35px;
+    padding:35px;
 
-    border-radius: 15px;
+    border-radius:15px;
 
-    border-top: 5px solid var(--gold);
+    border-top:5px solid var(--gold);
 
     box-shadow:
+
     0 5px 20px rgba(0,0,0,0.08);
 
 }
@@ -334,33 +419,9 @@ section h2 {
 
 .card h3 {
 
-    color: var(--brown);
+    color:var(--brown);
 
-    margin-bottom: 15px;
-
-}
-
-
-
-
-
-/* RSVP BUTTON */
-
-button {
-
-    background: var(--brown);
-
-    color: white;
-
-    border: none;
-
-    padding: 15px 35px;
-
-    border-radius: 30px;
-
-    cursor: pointer;
-
-    font-size: 16px;
+    margin-bottom:15px;
 
 }
 
@@ -368,15 +429,58 @@ button {
 
 
 
-#message {
 
-    margin-top: 20px;
 
-    color: var(--brown);
 
-    font-weight: bold;
+/* HOTEL LINKS */
+
+.hotel-link {
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    color:var(--brown);
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    border-bottom:2px solid var(--gold);
 
 }
+
+
+
+
+
+
+
+
+/* REGISTRY */
+
+.registry {
+
+    background:white;
+
+}
+
+
+
+
+
+
+
+/* RSVP */
+
+#rsvp {
+
+    background:var(--cream);
+
+}
+
+
+
 
 
 
@@ -386,15 +490,17 @@ button {
 
 footer {
 
-    background: var(--brown);
+    background:var(--brown);
 
-    color: var(--cream);
+    color:white;
 
-    padding: 30px;
+    text-align:center;
 
-    text-align: center;
+    padding:30px;
 
 }
+
+
 
 
 
@@ -407,11 +513,11 @@ footer {
 
     .slider {
 
-        width: 90%;
+        width:90%;
 
-        height: 75vh;
+        height:75vh;
 
-        border-width: 5px;
+        border-width:5px;
 
     }
 
@@ -419,7 +525,7 @@ footer {
 
     .overlay h1 {
 
-        font-size: 38px;
+        font-size:38px;
 
     }
 
@@ -427,7 +533,7 @@ footer {
 
     .overlay h2 {
 
-        font-size: 30px;
+        font-size:30px;
 
     }
 
@@ -435,7 +541,15 @@ footer {
 
     .overlay h3 {
 
-        font-size: 22px;
+        font-size:22px;
+
+    }
+
+
+
+    .invite {
+
+        font-size:16px;
 
     }
 
@@ -443,9 +557,18 @@ footer {
 
     #countdown {
 
-        font-size: 17px;
+        font-size:17px;
 
     }
+
+
+
+    section {
+
+        padding:60px 7%;
+
+    }
+
 
 
 }
