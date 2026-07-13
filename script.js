@@ -1,69 +1,99 @@
-
-const weddingDate = new Date("October 15, 2026 14:00:00").getTime();
-
-
-
-const timer = setInterval(function(){
+// =========================
+// OPEN INVITATION ENVELOPE
+// =========================
 
 
+function openInvitation() {
 
-const now = new Date().getTime();
-
-
-const distance = weddingDate - now;
+    const envelopeScreen = document.getElementById("envelopeScreen");
 
 
-
-const days = Math.floor(
-distance / (1000*60*60*24)
-);
+    envelopeScreen.classList.add("envelope-open");
 
 
+    setTimeout(function(){
 
-const hours = Math.floor(
-(distance % (1000*60*60*24)) /
-(1000*60*60)
-);
+        envelopeScreen.style.display = "none";
 
-
-
-const minutes = Math.floor(
-(distance % (1000*60*60)) /
-(1000*60)
-);
-
-
-
-const seconds = Math.floor(
-(distance % (1000*60)) /
-1000
-);
-
-
-
-
-document.getElementById("countdown").innerHTML =
-
-days + " Days " +
-hours + " Hours " +
-minutes + " Minutes " +
-seconds + " Seconds";
-
-
-
-
-
-if(distance < 0){
-
-
-clearInterval(timer);
-
-
-document.getElementById("countdown").innerHTML =
-"We are married! ❤️";
-
+    }, 1000);
 
 }
+
+
+
+
+
+
+
+// =========================
+// COUNTDOWN TIMER
+// =========================
+
+
+const weddingDate = new Date("October 15, 2026 12:00:00").getTime();
+
+
+
+const countdown = setInterval(function(){
+
+
+    const now = new Date().getTime();
+
+
+    const distance = weddingDate - now;
+
+
+
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
+
+
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        /
+        (1000 * 60 * 60)
+    );
+
+
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        /
+        (1000 * 60)
+    );
+
+
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        /
+        1000
+    );
+
+
+
+    document.getElementById("countdown").innerHTML =
+
+    days + " Days " +
+    hours + " Hours " +
+    minutes + " Minutes " +
+    seconds + " Seconds";
+
+
+
+    if(distance < 0){
+
+
+        clearInterval(countdown);
+
+
+        document.getElementById("countdown").innerHTML =
+        "Today is the day! ❤️";
+
+
+    }
 
 
 
