@@ -1,68 +1,249 @@
 :root {
 
-    --brown: #6B4F3A;
-    --dark-brown: #4A3728;
-    --cream: #F8F1E7;
-    --gold: #D4AF37;
-    --burgundy: #800020;
-    --white: #FFFFFF;
+--burgundy:#8B1E3F;
+
+--gold:#E8C46A;
+
+--ivory:#FFF8EE;
+
+--blush:#F6D6D6;
+
+--brown:#7A4B2A;
+
+--text:#4A3020;
+
+--white:#FFFFFF;
 
 }
+
 
 
 * {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
 
 }
+
 
 
 body {
 
-    font-family: "Georgia", serif;
-    background: var(--cream);
-    color: var(--dark-brown);
-    line-height: 1.8;
+font-family:"Georgia", serif;
+
+background:var(--ivory);
+
+color:var(--text);
+
+line-height:1.8;
 
 }
 
 
 
-/* HERO SECTION */
+/* ENVELOPE OPENING */
+
+
+.envelope-screen {
+
+position:fixed;
+
+width:100%;
+
+height:100vh;
+
+background:linear-gradient(
+135deg,
+#FFF8EE,
+#F6D6D6
+);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+
+
+.envelope {
+
+width:350px;
+
+height:230px;
+
+background:#FFF8EE;
+
+border:2px solid var(--gold);
+
+border-radius:12px;
+
+position:relative;
+
+box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+}
+
+
+
+.flap {
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+border-left:175px solid transparent;
+
+border-right:175px solid transparent;
+
+border-top:120px solid #EED9B7;
+
+}
+
+
+
+.initials {
+
+position:absolute;
+
+top:80px;
+
+width:100%;
+
+text-align:center;
+
+font-size:55px;
+
+color:var(--burgundy);
+
+}
+
+
+
+.wax-seal {
+
+position:absolute;
+
+bottom:-35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+background:var(--burgundy);
+
+color:var(--gold);
+
+border:none;
+
+font-size:25px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+
+}
+
+
+
+.wax-seal:hover {
+
+transform:translateX(-50%) scale(1.1);
+
+}
+
+
+
+.open-text {
+
+margin-top:50px;
+
+color:var(--brown);
+
+font-size:18px;
+
+}
+
+
+
+
+.envelope-open {
+
+animation:open 1s forwards;
+
+}
+
+
+
+@keyframes open {
+
+to {
+
+opacity:0;
+
+transform:scale(1.5) translateY(-100px);
+
+}
+
+}
+
+
+
+
+
+/* HERO */
+
 
 .hero {
 
-    min-height: 100vh;
-    background: var(--cream);
+min-height:100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+display:flex;
 
-    position: relative;
-    overflow: hidden;
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+overflow:hidden;
 
 }
 
 
 
-/* IMAGE SLIDER */
-
 .slider {
 
-    width: 420px;
-    height: 650px;
+width:420px;
 
-    overflow: hidden;
+height:650px;
 
-    border-radius: 25px;
+overflow:hidden;
 
-    border: 8px solid var(--gold);
+border-radius:25px;
 
-    box-shadow:
-    0 15px 40px rgba(0,0,0,0.25);
+border:8px solid var(--gold);
+
+box-shadow:0 15px 40px rgba(0,0,0,.25);
 
 }
 
@@ -70,12 +251,13 @@ body {
 
 .slides {
 
-    display: flex;
+display:flex;
 
-    width: 300%;
-    height: 100%;
+width:300%;
 
-    animation: slide 15s infinite;
+height:100%;
+
+animation:slide 15s infinite;
 
 }
 
@@ -83,88 +265,63 @@ body {
 
 .slides img {
 
-    width: 33.333%;
+width:33.333%;
 
-    height: 100%;
+height:100%;
 
-    object-fit: cover;
+object-fit:cover;
 
 }
 
 
-
-/* AUTO SLIDE */
 
 @keyframes slide {
 
+0%,30%{
 
-    0%,30% {
+transform:translateX(0);
 
-        transform: translateX(0);
+}
 
-    }
+35%,65%{
 
+transform:translateX(-33.333%);
 
-    35%,65% {
+}
 
-        transform: translateX(-33.333%);
+70%,100%{
 
-    }
+transform:translateX(-66.666%);
 
-
-    70%,100% {
-
-        transform: translateX(-66.666%);
-
-    }
-
+}
 
 }
 
 
-
-
-
-
-
-/* HERO TEXT OVERLAY */
 
 .overlay {
 
-    position: absolute;
+position:absolute;
 
-    width: 100%;
-    height: 100%;
+width:100%;
 
+height:100%;
 
-    background:
-    rgba(70,45,25,0.45);
+background:rgba(90,30,40,.35);
 
+display:flex;
 
-    display: flex;
+flex-direction:column;
 
-    flex-direction: column;
+justify-content:center;
 
-    justify-content: center;
+align-items:center;
 
-    align-items: center;
+text-align:center;
 
+color:white;
 
-    text-align: center;
-
-    color: white;
-
-    padding: 20px;
-
-}
-
-
-
-.overlay p {
-
-    font-size: 18px;
-
-    letter-spacing: 1px;
+padding:20px;
 
 }
 
@@ -172,11 +329,9 @@ body {
 
 .overlay h1 {
 
-    font-size: 55px;
+font-size:55px;
 
-    font-weight: normal;
-
-    margin: 5px;
+font-weight:normal;
 
 }
 
@@ -184,11 +339,9 @@ body {
 
 .overlay h2 {
 
-    color: var(--gold);
+font-size:40px;
 
-    font-size: 40px;
-
-    margin: 5px;
+color:var(--gold);
 
 }
 
@@ -196,62 +349,29 @@ body {
 
 .overlay h3 {
 
-    font-size: 28px;
-
-    margin-top: 15px;
+font-size:28px;
 
 }
 
 
-
-.invite {
-
-    max-width: 500px;
-
-    margin: 15px auto;
-
-}
-
-
-
-
-
-/* COUNTDOWN */
-
-#countdown {
-
-    font-size: 22px;
-
-    margin: 20px 0;
-
-    color:white;
-
-}
-
-
-
-
-
-
-/* BUTTONS */
 
 .button {
 
-    display:inline-block;
+display:inline-block;
 
-    background:var(--gold);
+background:var(--burgundy);
 
-    color:white;
+color:white;
 
-    padding:14px 40px;
+padding:14px 40px;
 
-    border-radius:30px;
+border-radius:30px;
 
-    text-decoration:none;
+border:2px solid var(--gold);
 
-    margin-top:20px;
+text-decoration:none;
 
-    transition:0.3s;
+margin-top:20px;
 
 }
 
@@ -259,7 +379,9 @@ body {
 
 .button:hover {
 
-    background:var(--brown);
+background:var(--gold);
+
+color:var(--burgundy);
 
 }
 
@@ -267,15 +389,14 @@ body {
 
 
 
+/* SECTIONS */
 
-
-/* GENERAL SECTIONS */
 
 section {
 
-    padding:80px 10%;
+padding:80px 10%;
 
-    text-align:center;
+text-align:center;
 
 }
 
@@ -283,35 +404,20 @@ section {
 
 section h2 {
 
-    color:var(--brown);
+font-size:38px;
 
-    font-size:38px;
+color:var(--burgundy);
 
-    margin-bottom:25px;
-
-}
-
-
-
-section p {
-
-    max-width:900px;
-
-    margin:auto;
+margin-bottom:25px;
 
 }
 
 
 
-
-
-
-
-/* WEDDING COLOURS SECTION */
 
 .colours {
 
-    background:white;
+background:white;
 
 }
 
@@ -319,15 +425,15 @@ section p {
 
 .colour-palette {
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    gap:30px;
+gap:30px;
 
-    margin-top:35px;
+margin-top:30px;
 
-    flex-wrap:wrap;
+flex-wrap:wrap;
 
 }
 
@@ -335,26 +441,21 @@ section p {
 
 .colour {
 
-    width:200px;
+width:200px;
 
-    height:130px;
+height:130px;
 
-    border-radius:15px;
+border-radius:15px;
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+justify-content:center;
 
-    justify-content:center;
+align-items:center;
 
-    color:white;
+font-weight:bold;
 
-    font-weight:bold;
-
-    font-size:20px;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,0.15);
+color:white;
 
 }
 
@@ -362,7 +463,7 @@ section p {
 
 .burgundy {
 
-    background:var(--burgundy);
+background:var(--burgundy);
 
 }
 
@@ -370,7 +471,9 @@ section p {
 
 .champagne {
 
-    background:var(--gold);
+background:var(--gold);
+
+color:var(--brown);
 
 }
 
@@ -378,20 +481,15 @@ section p {
 
 
 
-
-
-
-/* CARDS */
-
 .cards {
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    gap:25px;
+gap:25px;
 
-    flex-wrap:wrap;
+flex-wrap:wrap;
 
 }
 
@@ -399,19 +497,17 @@ section p {
 
 .card {
 
-    background:white;
+background:white;
 
-    width:300px;
+width:300px;
 
-    padding:35px;
+padding:35px;
 
-    border-radius:15px;
+border-radius:15px;
 
-    border-top:5px solid var(--gold);
+border-top:5px solid var(--gold);
 
-    box-shadow:
-
-    0 5px 20px rgba(0,0,0,0.08);
+box-shadow:0 5px 20px rgba(0,0,0,.1);
 
 }
 
@@ -419,156 +515,68 @@ section p {
 
 .card h3 {
 
-    color:var(--brown);
-
-    margin-bottom:15px;
+color:var(--brown);
 
 }
 
 
 
-
-
-
-
-
-/* HOTEL LINKS */
 
 .hotel-link {
 
-    display:inline-block;
+color:var(--burgundy);
 
-    margin-top:15px;
+text-decoration:none;
 
-    color:var(--brown);
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    border-bottom:2px solid var(--gold);
+font-weight:bold;
 
 }
 
 
 
 
-
-
-
-
-/* REGISTRY */
-
-.registry {
-
-    background:white;
-
-}
-
-
-
-
-
-
-
-/* RSVP */
-
-#rsvp {
-
-    background:var(--cream);
-
-}
-
-
-
-
-
-
-
-
-/* FOOTER */
 
 footer {
 
-    background:var(--brown);
+background:var(--burgundy);
 
-    color:white;
+color:white;
 
-    text-align:center;
+padding:30px;
 
-    padding:30px;
+text-align:center;
 
 }
 
 
 
 
-
-
-
-/* MOBILE DESIGN */
 
 @media(max-width:700px){
 
 
-    .slider {
+.slider {
 
-        width:90%;
+width:90%;
 
-        height:75vh;
+height:75vh;
 
-        border-width:5px;
-
-    }
+}
 
 
 
-    .overlay h1 {
+.overlay h1 {
 
-        font-size:38px;
+font-size:38px;
 
-    }
-
-
-
-    .overlay h2 {
-
-        font-size:30px;
-
-    }
+}
 
 
+section {
 
-    .overlay h3 {
+padding:60px 7%;
 
-        font-size:22px;
-
-    }
-
-
-
-    .invite {
-
-        font-size:16px;
-
-    }
-
-
-
-    #countdown {
-
-        font-size:17px;
-
-    }
-
-
-
-    section {
-
-        padding:60px 7%;
-
-    }
-
+}
 
 
 }
