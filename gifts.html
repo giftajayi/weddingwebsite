@@ -1,112 +1,152 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gifts & Registry | Gbemi & Funto</title>
 
 <link rel="stylesheet" href="style.css">
 
-</head>
+<style>
 
+body{
+    background:#FFF8F2;
+    font-family:Georgia, serif;
+    margin:0;
+    padding:0;
+}
+
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:70px 25px;
+}
+
+h1{
+    text-align:center;
+    color:#800020;
+    font-size:3.2rem;
+    margin-bottom:20px;
+}
+
+.intro{
+    text-align:center;
+    font-size:1.35rem;
+    color:#555;
+    max-width:700px;
+    margin:0 auto 60px;
+    line-height:1.8;
+}
+
+.cards{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+.card{
+    background:white;
+    border-left:8px solid #D4AF37;
+    border-radius:18px;
+    padding:50px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    color:#800020;
+    font-size:2.2rem;
+    margin-bottom:25px;
+}
+
+.card p{
+    font-size:1.5rem;
+    margin:12px 0;
+    color:#444;
+}
+
+.button{
+    display:inline-block;
+    margin-top:15px;
+    padding:18px 40px;
+    background:#800020;
+    color:#D4AF37;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:1.25rem;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#5d0018;
+}
+
+@media (max-width:768px){
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    .card{
+        padding:35px;
+    }
+
+    .card h3{
+        font-size:1.8rem;
+    }
+
+    .card p{
+        font-size:1.25rem;
+    }
+
+}
+
+</style>
+
+</head>
 
 <body>
 
-
 <section>
 
+<h1>Gifts & Registry</h1>
 
-<h1>
-Gifts & Registry
-</h1>
-
-
-<p>
-
-Your presence is the greatest gift we could ask for.
-
-For those who wish to bless us further, we appreciate your love and generosity.
-
+<p class="intro">
+Your presence is the greatest gift we could ask for. If you would like to bless us with a gift, we are truly grateful for your love and generosity.
 </p>
-
-
-
 
 <div class="cards">
 
+    <div class="card">
+        <h3>🎁 Amazon Registry</h3>
 
+        <a class="button"
+           href="https://www.amazon.ca/wedding/guest-view/UAX1CN2RJE39"
+           target="_blank">
+           View Registry
+        </a>
+    </div>
 
-<div class="card">
+    <div class="card">
+        <h3>🇳🇬 Nigeria Account</h3>
 
-<h3>
-Amazon Registry 🎁
-</h3>
+        <p><strong>Account Name:</strong> Gift Ajayi</p>
+        <p><strong>Bank:</strong> First Bank</p>
+        <p><strong>Account Number:</strong> 3104612960</p>
+    </div>
 
+    <div class="card">
+        <h3>🇨🇦 Canada Interac</h3>
 
-<a class="button"
-href="https://www.amazon.ca/wedding/guest-view/UAX1CN2RJE39"
-target="_blank">
-
-View Registry
-
-</a>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Nigeria Account 🇳🇬
-</h3>
-
-
-<p>
-Gift Ajayi
-</p>
-
-
-<p>
-First Bank
-</p>
-
-
-<p>
-3104612960
-</p>
-
+        <p><strong>Email:</strong> ajayigift.gg@gmail.com</p>
+    </div>
 
 </div>
-
-
-
-
-
-<div class="card">
-
-<h3>
-Canada Interac 🇨🇦
-</h3>
-
-
-<p>
-ajayigift.gg@gmail.com
-</p>
-
-
-</div>
-
-
-
-</div>
-
 
 </section>
-
 
 </body>
 
